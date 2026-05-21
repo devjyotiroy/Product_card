@@ -7,12 +7,33 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Product Cards</h1>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="subtitle">Discover products</p>
+      <h1>Modern Product Cards</h1>
+      <p class="description">
+        Browse stylish products, search instantly, and explore a cleaner shopping layout.
+      </p>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search products by title..."
+          autocomplete="off"
+        />
+        <button id="clearBtn" type="button">Clear</button>
+      </div>
+    </div>
   </header>
 
-  <main>
+  <main class="main-section">
+    <div class="top-bar">
+      <p id="resultsCount">Loading products...</p>
+    </div>
+
     <div id="product-container" class="product-container"></div>
+    <p id="noResults" class="no-results" style="display:none;">No products found.</p>
   </main>
 
   <script src="script.js"></script>
